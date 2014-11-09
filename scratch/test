@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<node depth="1" width="4" label="a">
+<node depth="2" width="1" label="b"/><node depth="2" width="1" label="c"/><node depth="2" width="2" label="d"><node depth="3" width="1" label="e"/><node depth="3" width="1" label="f"/></node></node><node depth="1" width="1" label="b"/><node depth="1" width="1" label="c"/><node depth="1" width="2" label="d"><node depth="2" width="1" label="e"/><node depth="2" width="1" label="f"/></node><node depth="1" width="1" label="e"/><node depth="1" width="1" label="f"/> Whent here
+
+
+
+
+<?xml version="1.0"?>
+<node label="_4">
+	<node label="_3">
+		<node label="_10">
+			<node label="_6"/>
+			<node label="_7"/>
+		</node>
+	</node>
+	<node label="_2">
+		<node label="_1">
+			<node label="_3">
+				<node label="_10">
+					<node label="_6"/>
+					<node label="_7"/>
+				</node>
+			</node>
+			<node label="_8"/>
+			<node label="_9"/>
+		</node>
+	</node>
+</node>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="dae2.xsl"?>
+
+<dae xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="dae.xsd">
+
+	<rootrule seqdaerule="_4"/>
+	
+	<rules>
+		<rule seqdaerule="_1">
+			<name>Rule 1</name>
+		</rule>
+		<rule seqdaerule="_2">
+			<name>Rule 2</name>
+		</rule>
+		<rule seqdaerule="_3">
+			<name>Rule 3</name>
+		</rule>
+		<rule seqdaerule="_4">
+			<name>Rule 4</name>
+		</rule>
+		<rule seqdaerule="_6">
+			<name>Rule 6</name>
+		</rule>
+		<rule seqdaerule="_7">
+			<name>Rule 7</name>
+		</rule>
+		<rule seqdaerule="_8">
+			<name>Rule 8</name>
+		</rule>
+		<rule seqdaerule="_9">
+			<name>Rule 9</name>
+		</rule>
+		<rule seqdaerule="_10">
+			<name>Rule 10</name>
+		</rule>
+		
+	</rules>
+	
+	
+	
+	<ruleitems>
+		<ruleitem seqdaerule="_2">
+			<callrule seqdaerule="_1"/>
+		</ruleitem>
+		<ruleitem seqdaerule="_4">
+			<callrule seqdaerule="_3"/>
+		</ruleitem>
+		<ruleitem seqdaerule="_1">
+			<callrule seqdaerule="_3"/>
+		</ruleitem>
+		<ruleitem seqdaerule="_1">
+			<callrule seqdaerule="_8"/>
+		</ruleitem>
+		<ruleitem seqdaerule="_1">
+			<callrule seqdaerule="_9"/>
+		</ruleitem>
+		<ruleitem seqdaerule="_1">
+			<callrule seqdaerule="_10"/>
+		</ruleitem>
+		<ruleitem seqdaerule="_4">
+			<callrule seqdaerule="_2"/>
+		</ruleitem>
+		<ruleitem seqdaerule="_3">
+			<callrule seqdaerule="_10"/>
+		</ruleitem>
+		<ruleitem seqdaerule="_10">
+			<callrule seqdaerule="_6"/>
+		</ruleitem>
+		<ruleitem seqdaerule="_10">
+			<callrule seqdaerule="_7"/>
+		</ruleitem>
+	</ruleitems>
+</dae>
+

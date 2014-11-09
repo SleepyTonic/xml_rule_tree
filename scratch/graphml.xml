@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="graphml.xsl"?>
+<graph edgedefault="directed">
+  <node id="n1">Node 1</node>
+  <node id="n2">Node 2</node>
+  <edge source="n1" target="n2"/>
+</graph>

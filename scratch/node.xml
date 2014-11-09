@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<?xml-stylesheet type="text/xsl" href="node.xsl"?>
+<node label="RuleA">
+   <node label="b"/>
+   <node label="c"/>
+   <node label="d">
+      <node label="e"/>
+      <node label="f"/>
+   </node>
+</node>

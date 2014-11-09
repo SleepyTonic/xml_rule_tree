@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='windows-1250'?>
+<!DOCTYPE article PUBLIC '-//OASIS//DTD DocBook XML V4.2//EN'
+'http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd'>
+<article lang="en">
+<title>DocBook article with hedges and trees</title>
+
+<para>Inline hedges: 
+	<phrase role="hedge">a(&epsiv;)</phrase>, 
+	<phrase role="hedge">a(x)</phrase> and
+        <phrase role="hedge">a(&epsiv;)b(c(&epsiv;)x)</phrase>.</para>
+
+<para>Sample tree: <phrase role="hedge">a(b(pqr)c(xyz)d(mno))</phrase></para>
+
+<para>Sample tree: <phrase role="hedge">a(bcd(ef))</phrase></para>
+
+</article>

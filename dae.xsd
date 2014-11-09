@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="dae">		
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="rootrule" minOccurs="1" maxOccurs="1">
+					<xsd:complexType>
+						 <xsd:attribute name="seqdaerule" type="xsd:IDREF" use="required"/>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="rules" minOccurs="1" maxOccurs="1">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="rule" minOccurs="0" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+									 	<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+									 </xsd:sequence>
+									 <xsd:attribute name="seqdaerule" type="xsd:ID" use="required"/>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="ruleitems" minOccurs="1" maxOccurs="1">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="ruleitem" minOccurs="0" maxOccurs="unbounded">
+								<xsd:complexType>
+									<xsd:sequence>
+									 	<xsd:element name="callrule" minOccurs="1" maxOccurs="1">
+									 		<xsd:complexType>
+									 			<xsd:attribute name="seqdaerule" type="xsd:IDREF" use="required"/>
+									 		</xsd:complexType>
+									 	</xsd:element>
+									 </xsd:sequence>
+									 <xsd:attribute name="seqdaerule" type="xsd:IDREF" use="required"/>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,13 @@
+.node > rect {
+  fill:silver;
+}
+.node > text {
+  text-anchor: middle; 
+  font-size: 0.15px;
+}
+.edge {
+  fill:black;
+  stroke-width: 0.01;
+  stroke: black;
+}
+.
