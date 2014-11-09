@@ -5,7 +5,6 @@
 		xsi:noNamespaceSchemaLocation="dae.xsd">
 
 	<rootrule seqdaerule="_4"/>
-	
 	<rules>
 		<rule seqdaerule="_1">
 			<name>Rule 1</name>
@@ -34,11 +33,10 @@
 		<rule seqdaerule="_10">
 			<name>Rule 10</name>
 		</rule>
-		
+		<rule seddaerule="_11">
+			<name>Rule #11</name>
+		</rule>
 	</rules>
-	
-	
-	
 	<ruleitems>
 		<ruleitem seqdaerule="_2">
 			<callrule seqdaerule="_1"/>
