@@ -41,9 +41,7 @@
 </xsl:template>
 
 
-<!--
-width and height node parsing
--->
+<!-- width and height node parsing -->
 
 <!-- Add layout attributes to non-leaf nodes -->
 <xsl:template match="node[node]" mode="xml2layout">
@@ -72,10 +70,7 @@ width and height node parsing
 </xsl:template>        
 
 
-
-<!-- 
-Layout to SVG 
--->
+<!-- Layout to SVG -->
 
 <!-- Magnifying factor -->
 <xsl:param name="hedge.scale" select="10"/>
@@ -83,7 +78,6 @@ Layout to SVG
 <!-- Convert layout to SVG -->
 <xsl:template name="layout2svg">
   <xsl:param name="layout"/>
-
 
 	
   <!-- Find depth of the tree -->
@@ -101,7 +95,7 @@ Layout to SVG
   <!--<xsl:value-of select="$layout/node/@width"/>-->
   <xsl:processing-instruction name="xml-stylesheet">type="text/css" href="node.css"</xsl:processing-instruction>
   
-  <!--<xsl:processing-instruction name="xml-stylesheet">type="text/javascript" href="dae2.js"</xsl:processing-instruction>-->
+ <!--<xsl:processing-instruction name="xml-stylesheet">type="text/javascript" href="dae2.js"</xsl:processing-instruction>-->
  <!-- <script href="dae2.js" type="text/javascript" />-->
   
   <svg:svg onload="init2(evt)" viewBox="0 0 {sum($layout/node/@width) * 2 * $hedge.scale} {$maxDepth * 2 * $hedge.scale}"  
@@ -110,13 +104,13 @@ Layout to SVG
 		<xsl:value-of select="$layout/node/@label"></xsl:value-of>
 	</xsl:attribute>
 	<svg:script xlink:href="dae2.js" type="text/javascript" />
-		<svg:script type="text/javascript"><![CDATA[
-function init2(evt) { 
-	alert('aa');
-    if ( window.svgDocument == null )
-        svgDocument = evt.target.ownerDocument;
-}
-]]></svg:script>
+	<svg:script type="text/javascript"><![CDATA[
+		function init2(evt) { 
+			console.log('aa');
+		    if ( window.svgDocument == null )
+		        svgDocument = evt.target.ownerDocument;
+		}
+	]]></svg:script>
    
 	<svg:defs>
 		<svg:marker id="arrow" refX="0.0625" refY="0.0625" markerUnits="userSpaceOnUse" markerWidth="0.125" markerHeight="0.125" orient="auto">
@@ -172,57 +166,3 @@ function init2(evt) {
   <xsl:apply-templates select="node" mode="layout2svg"/>
 </xsl:template>	
 </xsl:stylesheet>
-
-
-
-
-
-
-
-
-<!--
-<xsl:apply-templates select="key('seqdaerule', callrule/@seqdaerule)" mode='nodelayout2'>
--->
-
-
-<!--
-		<graph edgedefault="directed">
-			<xsl:apply-templates select="dae/rules/rule" mode='nodelayout'/>
-	   		<xsl:apply-templates select="dae/ruleitems/ruleitem" mode='nodelayout2'>
-	   			 <xsl:sort select="@seqdaerule" data-type="text" order="ascending"/>
-			</xsl:apply-templates>
-	   	</graph>
-		-->
-	
-	
-	<!--
-	<xsl:value-of select="exsl:node-set($graphTree)//graph"/>
-	-->
-	
-	<!-- Turn XML nodes into SVG image -->
-	<!--
-  <xsl:call-template name="layout2svg">
-    <xsl:with-param name="graph" select="exsl:node-set($graphTree)"/>
-  </xsl:call-template>
-  -->
-
-<!--
-<xsl:template match="ruleitems">
- <xsl:text>Testing RuleItems</xsl:text>
-  <xsl:apply-templates select="ruleitem"/>
-</xsl:template>
--->
-
-
-<!--
-<xsl:template match="rules">
- <xsl:text>Testing Rules</xsl:text>
- 	<xsl:apply-templates select="rule" mode="display"/>
-</xsl:template>
--->
-
-<!--
-<xsl:template match="rule" mode="display">
- 	<xsl:value-of select="name"/>
-</xsl:template>
--->
