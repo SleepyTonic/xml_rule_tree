@@ -1,5 +1,5 @@
 <?xml version="1.0" standalone="no"?>
-<!-- TODO: test github-todos -->
+<!-- TODO test github-todos -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 				xmlns:exsl="http://exslt.org/common"
 				xmlns:xlink="http://www.w3.org/1999/xlink"
