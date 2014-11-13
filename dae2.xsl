@@ -19,6 +19,7 @@
 			<xsl:apply-templates select="dae/ruleitems/ruleitem[@seqdaerule=$root]"/>
 		</node>
 	</xsl:variable>
+	
 
 
 	<xsl:variable name="layoutTree">
